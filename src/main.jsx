@@ -10,6 +10,7 @@ import Coffee from "./pages/Coffee";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import CoffeeCards from "./components/CoffeeCards";
+import CoffeeDetails from "./pages/CoffeeDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: async () => {
-          const response = await fetch("/public/coffee.json");
+          const response = await fetch("/coffee.json");
           if (!response.ok) {
             throw new Error("Failed to fetch coffee data");
           }
@@ -36,11 +37,16 @@ const router = createBrowserRouter([
       {
         path: "/coffee",
         element: <Coffee />,
-        loader: () => fetch("/public/coffee.json")
+        loader: () => fetch("/coffee.json")
       },
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/coffeeDetails/:id",
+        element: <CoffeeDetails />,
+        loader: () => fetch("/coffee.json")
       },
     ],
   },

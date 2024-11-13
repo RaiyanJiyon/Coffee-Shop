@@ -21,7 +21,7 @@
   {
     "id": 2,
     "name": "Cappuccino",
-    "image": "https://i.ibb.co.com/FBhC5qD/istockphoto-505168330-612x612.webp",
+    "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "category": "Brewed Coffee",
     "ingredients": ["Espresso", "Steamed Milk", "Milk Foam"],
     "nutrition_info": {
