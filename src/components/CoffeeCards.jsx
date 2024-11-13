@@ -1,7 +1,24 @@
-const CoffeeCards = () => {
-    return (
-        <div>
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import CoffeeCard from "./CoffeeCard";
 
+const CoffeeCards = () => {
+    const [activeTab, setActiveTab] = useState("Brewed Coffee");
+
+    const allCoffee = useLoaderData();
+
+    // console.log(allCoffee);
+    
+    const filteredCoffee = allCoffee.filter(coffee => coffee.category === activeTab);
+    // console.log(filteredCard);
+    
+    const handleTabClick = (category) => {
+        setActiveTab(category)
+    }
+
+
+    return (
+        <div className="w-11/12 mx-auto">
             <div className="hero-content text-center">
                 <div className="max-w-xl">
                     <h1 className="mb-5 text-5xl font-bold">Browse Coffees By Category</h1>
@@ -12,9 +29,17 @@ const CoffeeCards = () => {
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
-                <a role="tab" className="tab">Brewed Coffee</a>
-                <a role="tab" className="tab tab-active">Iced Coffee</a>
-                <a role="tab" className="tab">Dessert Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Brewed Coffee" ? "tab-active" : ""} `} onClick={() => handleTabClick("Brewed Coffee")}>Brewed Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Iced Coffee" ? "tab-active" : ""}`} onClick={() => handleTabClick("Iced Coffee")}>Iced Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Dessert Coffee" ? "tab-active" : ""}`} onClick={() => handleTabClick("Dessert Coffee")}>Dessert Coffee</a>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-20">
+                {
+                    filteredCoffee.map(coffee => (
+                        <CoffeeCard key={coffee.id} coffee={coffee} />
+                    ))
+                }
             </div>
         </div>
 
