@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,17 +28,17 @@ const Navbar = () => {
                         <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/dashboard"}>Dashboard</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Coffee Shop</a>
+                <a className="btn btn-ghost text-xl">Artisan Coffee</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-10">
+
+            </div>
+            <div className="navbar-end">
+            <ul className="menu menu-horizontal px-1 gap-10">
                     <NavLink to={"/"} className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'}>Home</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/coffee"}>Coffee</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/dashboard"}>Dashboard</NavLink>
                 </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
             </div>
         </div>
     );
