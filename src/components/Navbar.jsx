@@ -1,5 +1,4 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -28,7 +27,7 @@ const Navbar = () => {
                         <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/dashboard"}>Dashboard</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Artisan Coffee</a>
+                <Link to={"/"} className="btn btn-ghost text-xl">Artisan Coffee</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
 

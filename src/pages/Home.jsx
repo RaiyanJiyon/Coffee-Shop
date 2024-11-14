@@ -3,7 +3,7 @@ import CoffeeCards from "../components/CoffeeCards";
 
 const Home = () => {
     return (
-        <div className="space-y-6">
+        <div className="mt-4">
             <Banner />
             <CoffeeCards />
         </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerImg from "../assets/banner.jpg"
 
 const Banner = () => {
@@ -14,7 +15,7 @@ const Banner = () => {
                     <p className="mb-5">
                     Indulge in the captivating aroma and rich flavors of our carefully curated selection of artisanal coffees. Discover the perfect blend to elevate your daily routine and savor the moments of tranquility. Explore our diverse offerings and embark on a journey of coffee connoisseurship.
                     </p>
-                    <button className="btn btn-primary bg-red-500 border-none font-bold">View More</button>
+                    <Link to={"/coffee"} className="btn bg-red-500 text-white border-none font-bold">View More</Link>
                 </div>
             </div>
         </div>
