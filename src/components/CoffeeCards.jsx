@@ -29,9 +29,9 @@ const CoffeeCards = () => {
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
-                <a role="tab" className={`tab ${activeTab === "Brewed Coffee" ? "tab-active" : ""} `} onClick={() => handleTabClick("Brewed Coffee")}>Brewed Coffee</a>
-                <a role="tab" className={`tab ${activeTab === "Iced Coffee" ? "tab-active" : ""}`} onClick={() => handleTabClick("Iced Coffee")}>Iced Coffee</a>
-                <a role="tab" className={`tab ${activeTab === "Dessert Coffee" ? "tab-active" : ""}`} onClick={() => handleTabClick("Dessert Coffee")}>Dessert Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Brewed Coffee" ? "tab-active text-red-500 font-bold" : ""} `} onClick={() => handleTabClick("Brewed Coffee")}>Brewed Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Iced Coffee" ? "tab-active text-red-500 font-bold" : ""}`} onClick={() => handleTabClick("Iced Coffee")}>Iced Coffee</a>
+                <a role="tab" className={`tab ${activeTab === "Dessert Coffee" ? "tab-active text-red-500 font-bold" : ""}`} onClick={() => handleTabClick("Dessert Coffee")}>Dessert Coffee</a>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-20">
