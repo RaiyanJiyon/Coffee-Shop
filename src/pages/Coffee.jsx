@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import CoffeeCard from "../components/CoffeeCard";
 
 
 const Coffee = () => {
@@ -12,6 +13,15 @@ const Coffee = () => {
                 <button className="btn btn-primary bg-red-500 border-none font-bold">Sort By Popularity</button>
                 <button className="btn btn-primary bg-red-500 border-none font-bold">Sort By Rating</button>
                 </div>
+            </div>
+
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-20">
+                {
+                    allCoffee.map(coffee => (
+                        <CoffeeCard key={coffee.id} coffee={coffee} />
+                    ))
+                }
             </div>
         </div>
     );

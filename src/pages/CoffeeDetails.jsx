@@ -1,8 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import nutritionImg from "../assets/nutrition.png"
+import { useEffect } from "react";
 
 
 const CoffeeDetails = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const { id } = useParams();
     const coffeeId = parseInt(id);
 
@@ -14,13 +19,12 @@ const CoffeeDetails = () => {
 
     console.log(filteredCoffee)
 
-    const { id: coffeeID, name, image, ingredients, nutrition_info, making_process, rating, popularity } = filteredCoffee;
-
-
+    const { id: coffeeID, name, description, image, ingredients, nutrition_info, making_process, rating, popularity } = filteredCoffee;
 
     return (
         <div className="w-11/12 mx-auto mt-4">
             <h1 className="text-3xl font-medium pb-6">{name}</h1>
+            <p className="mb-8">{description}</p>
             <img className="rounded-lg w-full" src={image} alt="" />
 
             <div className="space-y-2 mt-10">
