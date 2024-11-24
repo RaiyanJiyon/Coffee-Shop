@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import nutritionImg from "../assets/nutrition.png"
 import { useEffect } from "react";
+import { addToCart, addToWishList } from "../utilities/addToDb";
 
 
 const CoffeeDetails = () => {
@@ -19,16 +20,29 @@ const CoffeeDetails = () => {
 
     console.log(filteredCoffee)
 
-    const { id: coffeeID, name, description, image, ingredients, nutrition_info, making_process, rating, popularity } = filteredCoffee;
+    const handleAddToCart = (coffeeID) => {
+        addToCart(coffeeID);
+    };
+
+    const handleAddToWishlist = (coffeeID) => {
+        addToWishList(coffeeID);
+    };
+
+    const { id: coffeeID, description, image, ingredients, nutrition_info, making_process, rating, popularity } = filteredCoffee;
 
     return (
         <div className="w-11/12 mx-auto mt-4">
-            <h1 className="text-3xl font-medium pb-6">{name}</h1>
-            <p className="mb-8">{description}</p>
-            <img className="rounded-lg w-full" src={image} alt="" />
+            <h1 className="text-3xl font-medium pb-6">{description}</h1>
+            <img className="rounded-lg w-full h-[400px]" src={image} alt="" />
 
             <div className="space-y-2 mt-10">
-                <h2 className="text-2xl">Mocha</h2>
+                <div className="flex justify-between items-center">
+                    <h2 className="text-2xl">Mocha</h2>
+                    <div className="space-x-4">
+                        <button onClick={() => handleAddToCart(coffeeID)} className="btn bg-red-500 text-white border-none font-bold">Add To Cart</button>
+                        <button onClick={() => handleAddToWishlist(coffeeID)} className="btn bg-red-500 text-white border-none font-bold">Add To Wishlist</button>
+                    </div>
+                </div>
                 <p>Popularity: {popularity}</p>
                 <p>Rating: {rating}</p>
             </div>
@@ -54,7 +68,7 @@ const CoffeeDetails = () => {
                         <h2 className="text-2xl">Nutrition</h2>
                         <ul className="pl-4 mt-3">
                             {
-                                
+
                                 Object.entries(nutrition_info).map((nutrition, index) => (
                                     <li key={index} className="list-disc">{nutrition}</li>
                                 ))

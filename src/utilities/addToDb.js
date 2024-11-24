@@ -1,3 +1,6 @@
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Constants for local storage keys
 const CART_LIST_KEY = "cart-list";
 const WISH_LIST_KEY = "wish-list";
@@ -15,9 +18,27 @@ const addToCart = (id) => {
     if (!cartItems.includes(id)) {
         cartItems.push(id);
         localStorage.setItem(CART_LIST_KEY, JSON.stringify(cartItems));
-        console.log(`Item with ID ${id} added to cart.`);
+        toast.success(`Item with ID ${id} added to cart.`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     } else {
-        console.log(`Item with ID ${id} is already in the cart.`);
+        toast.error(`Item with ID ${id} is already in the cart.`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 };
 
@@ -34,9 +55,27 @@ const addToWishList = (id) => {
     if (!wishListItems.includes(id)) {
         wishListItems.push(id);
         localStorage.setItem(WISH_LIST_KEY, JSON.stringify(wishListItems));
-        console.log(`Item with ID ${id} added to wish list.`);
+        toast.success(`Item with ID ${id} added to wish list.`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     } else {
-        console.log(`Item with ID ${id} is already in the wish list.`);
+        toast.error(`Item with ID ${id} is already in the wish list.`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 };
 

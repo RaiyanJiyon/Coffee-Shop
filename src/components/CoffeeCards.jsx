@@ -18,7 +18,7 @@ const CoffeeCards = () => {
 
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-10">
             <div className="hero-content text-center">
                 <div className="max-w-xl">
                     <h1 className="mb-5 text-5xl font-bold">Browse Coffees By Category</h1>
