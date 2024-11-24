@@ -14,10 +14,12 @@ import CoffeeDetails from "./pages/CoffeeDetails";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Main from "./layout/Main";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage />,
     element: <Main />,
     children: [
       {
