@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Main from "./layout/MAin";
+
 import Coffee from "./pages/Coffee";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -13,6 +13,7 @@ import CoffeeCards from "./components/CoffeeCards";
 import CoffeeDetails from "./pages/CoffeeDetails";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Main from "./layout/Main";
 
 const router = createBrowserRouter([
   {
