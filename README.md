@@ -4,7 +4,7 @@ Welcome to Artisan Coffee, a platform where coffee enthusiasts can explore a var
 ---
 
 ## 🚀 Live Website Link  
-Check out the live version of the website here: **[Artisan Coffee Live](#)** (`https://soft-faun-318037.netlify.app/`).
+Check out the live version of the website here: Artisan Coffee Live (https://soft-faun-318037.netlify.app/).
 
 ---
 
