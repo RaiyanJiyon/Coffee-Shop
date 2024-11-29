@@ -36,7 +36,7 @@ const CoffeeDetails = () => {
             <img className="rounded-lg w-full md:h-[400px]" src={image} alt="" />
 
             <div className="space-y-2 mt-10">
-                <div className="flex flex-col sm:flex-row justify-start sm:justify-between items-center border border-red-500">
+                <div className="flex flex-col sm:flex-row justify-start sm:justify-between items-center">
                     <h2 className="text-2xl">Mocha</h2>
                     <div className="flex justify-between w-full sm:w-auto space-x-4 py-4 sm:py-0">
                         <button onClick={() => handleAddToCart(coffeeID)} className="btn bg-red-500 text-white border-none font-bold">Add To Cart</button>
