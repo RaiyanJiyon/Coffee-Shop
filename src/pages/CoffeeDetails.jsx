@@ -33,12 +33,12 @@ const CoffeeDetails = () => {
     return (
         <div className="w-11/12 mx-auto mt-4">
             <h1 className="text-3xl font-medium pb-6">{description}</h1>
-            <img className="rounded-lg w-full h-[400px]" src={image} alt="" />
+            <img className="rounded-lg w-full md:h-[400px]" src={image} alt="" />
 
             <div className="space-y-2 mt-10">
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col sm:flex-row justify-start sm:justify-between items-center border border-red-500">
                     <h2 className="text-2xl">Mocha</h2>
-                    <div className="space-x-4">
+                    <div className="flex justify-between w-full sm:w-auto space-x-4 py-4 sm:py-0">
                         <button onClick={() => handleAddToCart(coffeeID)} className="btn bg-red-500 text-white border-none font-bold">Add To Cart</button>
                         <button onClick={() => handleAddToWishlist(coffeeID)} className="btn bg-red-500 text-white border-none font-bold">Add To Wishlist</button>
                     </div>
@@ -77,7 +77,7 @@ const CoffeeDetails = () => {
                     </div>
                 </div>
                 <div className="space-y-4 w-1/2">
-                    <img className="h-11/12" src={nutritionImg} alt="" />
+                    <img className="md:h-11/12" src={nutritionImg} alt="" />
                 </div>
             </div>
         </div>

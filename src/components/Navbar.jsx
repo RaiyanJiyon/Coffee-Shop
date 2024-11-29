@@ -33,7 +33,7 @@ const Navbar = () => {
 
             </div>
             <div className="navbar-end">
-            <ul className="menu menu-horizontal px-1 gap-10">
+            <ul className="hidden lg:flex menu menu-horizontal px-1 gap-10">
                     <NavLink to={"/"} className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'}>Home</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/coffee"}>Coffee</NavLink>
                     <NavLink className={({ isActive }) => isActive ? 'text-red-400' : 'text-black'} to={"/dashboard"}>Dashboard</NavLink>
